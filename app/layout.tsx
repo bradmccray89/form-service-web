@@ -38,24 +38,25 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
+          fontSans.variable
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+            <main className="container flex-grow px-6 pt-16 mx-auto max-w-7xl">
               {children}
             </main>
-            <footer className="w-full flex items-center justify-center py-3">
+            <footer className="flex items-center justify-center w-full py-3">
               <Link
                 isExternal
                 className="flex items-center gap-1 text-current"
-                href="https://heroui.com?utm_source=next-app-template"
-                title="heroui.com homepage"
+                href="https://mccraywebdevelopment.com"
+                title="McCray Web Development - Web Development Services"
               >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">HeroUI</p>
+                <span className="text-default-600">Created by</span>
+                <br />
+                <p className="text-primary">McCray Web Development</p>
               </Link>
             </footer>
           </div>
