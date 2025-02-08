@@ -68,17 +68,17 @@ export function Navbar() {
               const isCurrent = pathname === item.href;
               return (
                 <NavbarItem key={item.href}>
-                  <NextLink
+                  <Link
                     className={clsx(
                       linkStyles({ color: "foreground" }),
                       "data-[active=true]:text-primary data-[active=true]:font-medium",
-                      isCurrent && "text-primary font-medium"
+                      isCurrent && "underline underline-offset-8"
                     )}
                     color="foreground"
                     href={item.href}
                   >
                     {item.label}
-                  </NextLink>
+                  </Link>
                 </NavbarItem>
               );
             })}
@@ -132,7 +132,7 @@ export function Navbar() {
               return (
                 <NavbarMenuItem key={`${item}-${index}`}>
                   <Link
-                    color={isCurrent ? "primary" : "foreground"}
+                    color={isCurrent ? "success" : "foreground"}
                     href={item.href}
                     size="lg"
                   >

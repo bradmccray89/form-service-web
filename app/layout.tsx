@@ -51,12 +51,12 @@ export default function RootLayout({
               <Link
                 isExternal
                 className="flex items-center gap-1 text-current"
-                href="https://mccraywebdevelopment.com"
-                title="McCray Web Development - Web Development Services"
+                href="https://brandonmccray.com"
+                title="Brandon McCray Portfolio"
               >
                 <span className="text-default-600">Created by</span>
                 <br />
-                <p className="text-primary">McCray Web Development</p>
+                <p className="text-primary">Brandon McCray</p>
               </Link>
             </footer>
           </div>

@@ -1,3 +1,4 @@
+"use client";
 import { Link } from "@heroui/link";
 import { Snippet } from "@heroui/snippet";
 import { Code } from "@heroui/code";
@@ -6,14 +7,41 @@ import { button as buttonStyles } from "@heroui/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableColumn,
+  TableHeader,
+  TableRow,
+} from "@heroui/table";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+    <div className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="justify-center inline-block max-w-xl text-center">
         <span className={title({ color: "green" })}>Forms</span>
       </div>
-    </section>
+      <Table>
+        <TableHeader>
+          <TableColumn>Form Name</TableColumn>
+          <TableColumn>Form Type</TableColumn>
+          <TableColumn>Form Status</TableColumn>
+        </TableHeader>
+        <TableBody>
+          <TableRow key="1">
+            <TableCell>Form 1</TableCell>
+            <TableCell>Form Type 1</TableCell>
+            <TableCell>Form Status 1</TableCell>
+          </TableRow>
+          <TableRow key="2">
+            <TableCell>Form 2</TableCell>
+            <TableCell>Form Type 2</TableCell>
+            <TableCell>Form Status 2</TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    </div>
   );
   // return (
   //   <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
