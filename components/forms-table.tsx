@@ -13,9 +13,8 @@ type FormData = {
 };
 
 export default function FormsTable({ forms }: FormData) {
-  console.log("Client Data", forms);
   return (
-    <Table aria-label="Forms Table">
+    <Table isStriped aria-label="Forms Table">
       <TableHeader>
         <TableColumn>Form Name</TableColumn>
         <TableColumn>Description</TableColumn>
@@ -26,7 +25,7 @@ export default function FormsTable({ forms }: FormData) {
           <TableRow key={index}>
             <TableCell>{form.title}</TableCell>
             <TableCell>{form.description}</TableCell>
-            <TableCell>{form.status}</TableCell>
+            <TableCell>{form.isActive ? "Active" : "Inactive"}</TableCell>
           </TableRow>
         ))}
       </TableBody>
