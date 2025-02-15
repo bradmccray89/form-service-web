@@ -10,14 +10,19 @@ export const siteConfig = {
       active: true,
     },
     {
+      label: "Forms",
+      href: "/forms",
+      active: true,
+    },
+    {
       label: "Docs",
       href: "/docs",
-      active: true,
+      active: false,
     },
     {
       label: "Pricing",
       href: "/pricing",
-      active: true,
+      active: false,
     },
     {
       label: "Blog",
@@ -37,14 +42,19 @@ export const siteConfig = {
       active: true,
     },
     {
+      label: "Forms",
+      href: "/forms",
+      active: true,
+    },
+    {
       label: "Docs",
       href: "/docs",
-      active: true,
+      active: false,
     },
     {
       label: "Pricing",
       href: "/pricing",
-      active: true,
+      active: false,
     },
     {
       label: "Profile",
