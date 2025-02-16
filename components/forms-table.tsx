@@ -33,7 +33,7 @@ export default function FormsTable({ forms }: FormData) {
         <TableColumn>Status</TableColumn>
       </TableHeader>
       <TableBody>
-        {forms.map((form: any, index: number) => (
+        {forms.map((form: any) => (
           <TableRow key={form.id}>
             <TableCell>{form.title}</TableCell>
             <TableCell>{form.description}</TableCell>

@@ -1,3 +1,5 @@
+import { Link } from "@heroui/link";
+
 export default async function FormPage({
   params,
 }: {
@@ -10,6 +12,9 @@ export default async function FormPage({
 
   return (
     <div>
+      <Link href="/forms" color="primary" underline="hover">
+        Back to Forms
+      </Link>
       <h1>{formData.title}</h1>
       <div>{formData.description}</div>
     </div>
