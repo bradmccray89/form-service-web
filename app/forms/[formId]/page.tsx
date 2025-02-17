@@ -1,6 +1,6 @@
 import FormHeader from "@/components/form-header";
 import FormHeaderActions from "@/components/form-header-actions";
-import { Input } from "@heroui/input";
+import FormInput from "@/components/form-input";
 
 export default async function FormPage({
   params,
@@ -18,7 +18,7 @@ export default async function FormPage({
       <FormHeader formData={formData} />
       <div className="flex flex-col gap-4 justify-center items-start w-full max-w-[600px] p-4">
         {formData.formFields.map((field: any) => (
-          <Input key={field.id} className="w-full" label={field.label} />
+          <FormInput key={field.id} field={field} />
         ))}
       </div>
     </div>
