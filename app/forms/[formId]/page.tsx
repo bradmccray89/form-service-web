@@ -1,4 +1,5 @@
 import FormHeader from "@/components/form-header";
+import FormHeaderActions from "@/components/form-header-actions";
 import { Button } from "@heroui/button";
 import { Checkbox } from "@heroui/checkbox";
 import { Input } from "@heroui/input";
@@ -16,21 +17,8 @@ export default async function FormPage({
 
   return (
     <div className="flex flex-col items-center justify-center w-full">
+      <FormHeaderActions formData={formData} />
       <FormHeader formData={formData} />
-      <div className="flex flex-col items-center justify-center w-full p-4 border-b gap-y-4 border-gray-400/50">
-        <Input
-          className="max-w-md"
-          label="Name"
-          value={formData.title}
-          size="lg"
-        />
-        <Input
-          className="max-w-md"
-          label="Description"
-          value={formData.description}
-          size="lg"
-        />
-      </div>
       <div className="flex flex-col items-center justify-center w-full p-4 gap-y-4">
         {formData.formFields.map((field: any) => (
           <Input key={field.id} className="max-w-md" label={field.label} />
