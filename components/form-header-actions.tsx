@@ -1,6 +1,8 @@
 "use client";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
+import { ArrowLeftIcon, EyeIcon, SaveIcon } from "./icons";
+import { Tooltip } from "@heroui/tooltip";
 
 export default function FormHeaderActions({ formData }: { formData: any }) {
   const saveFormData = async () => {
@@ -13,13 +15,46 @@ export default function FormHeaderActions({ formData }: { formData: any }) {
   };
 
   return (
-    <div className="flex items-center justify-between w-full p-4">
-      <Button as={Link} href="/forms">
+    <div className="flex items-center justify-between w-full gap-4 p-4">
+      <Button
+        as={Link}
+        href="/forms"
+        isIconOnly
+        aria-label="Back to Forms"
+        className="md:hidden"
+      >
+        <ArrowLeftIcon />
+      </Button>
+      <Button
+        as={Link}
+        href="/forms"
+        startContent={<ArrowLeftIcon size={18} />}
+        aria-label="Back to Forms"
+        className="hidden md:flex"
+      >
         Back to Forms
       </Button>
-      <Button color="primary" onPress={saveFormData}>
-        Save
-      </Button>
+      <div className="flex items-center justify-center flex-grow gap-4 md:flex-grow-0">
+        <Button
+          as={Link}
+          href={`/forms/${formData.id}/preview`}
+          target="_blank"
+          startContent={<EyeIcon />}
+          className="w-full md:w-auto"
+          aria-label="Preview"
+        >
+          Preview
+        </Button>
+        <Button
+          color="primary"
+          onPress={saveFormData}
+          startContent={<SaveIcon />}
+          className="w-full md:w-auto"
+          aria-label="Save"
+        >
+          Save
+        </Button>
+      </div>
     </div>
   );
 }
