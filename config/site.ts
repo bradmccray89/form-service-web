@@ -104,4 +104,34 @@ export const siteConfig = {
     discord: "https://discord.gg/9b6yyZKmH4",
     sponsor: "https://patreon.com/jrgarciadev",
   },
+  inputTypes: [
+    {
+      key: "text",
+      label: "Text",
+    },
+    {
+      key: "number",
+      label: "Number",
+    },
+    {
+      key: "date",
+      label: "Date",
+    },
+    {
+      key: "textarea",
+      label: "Textarea",
+    },
+    {
+      key: "select",
+      label: "Select",
+    },
+    {
+      key: "checkbox",
+      label: "Checkbox",
+    },
+    {
+      key: "radio",
+      label: "Radio",
+    },
+  ],
 };
