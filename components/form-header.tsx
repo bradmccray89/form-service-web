@@ -9,7 +9,7 @@ export default function FormHeader({ formData }: { formData: any }) {
   const [description, setDescription] = useState(formData.description);
 
   return (
-    <div className="flex flex-col gap-4 justify-center items-start w-full max-w-[600px] border-b border-gray-500/50 p-4">
+    <div className="flex flex-col gap-4 justify-center items-start w-full max-w-[600px] p-4">
       <div className="relative flex items-center justify-start w-full gap-4 p-6 mt-4 border rounded-lg border-gray-500/50">
         <span className="absolute top-0 px-2 text-gray-500 -translate-x-1/2 -translate-y-1/2 bg-white left-1/2 dark:bg-black">
           Form Settings

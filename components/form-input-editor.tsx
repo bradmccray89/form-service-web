@@ -21,7 +21,7 @@ export default function FormInputEditor({
   );
 
   return (
-    <div className="relative flex items-center justify-between w-full gap-4 p-4 border rounded-md border-gray-500/50">
+    <div className="relative flex flex-col items-center justify-between w-full gap-4 p-4 border rounded-md md:flex-row border-gray-500/50">
       <span className="absolute top-0 px-2 text-gray-500 -translate-y-1/2 bg-white left-8 dark:bg-black">
         Question {index + 1}
       </span>
@@ -30,10 +30,7 @@ export default function FormInputEditor({
         label="Type"
         items={items}
         selectedKeys={[selectedKeys]}
-        onSelectionChange={(keys) => {
-          const selectedKey = keys;
-          setSelectedKeys(selectedKey as string);
-        }}
+        onSelectionChange={(keys) => setSelectedKeys(keys as string)}
       >
         {(item: any) => <SelectItem>{item.label}</SelectItem>}
       </Select>
