@@ -2,13 +2,15 @@
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 import { ArrowLeftIcon, EyeIcon, SaveIcon } from "./icons";
-import { Tooltip } from "@heroui/tooltip";
 
 export default function FormHeaderActions({ formData }: { formData: any }) {
   const saveFormData = async () => {
     const res = await fetch(`http://localhost:8080/api/forms/${formData.id}`, {
       method: "PUT",
-      body: JSON.stringify({ ...formData }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
     });
     const updatedFormData = await res.json();
     console.log(updatedFormData);
